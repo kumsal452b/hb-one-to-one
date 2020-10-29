@@ -25,9 +25,8 @@ public class InstructorDetail {
 		public InstructorDetail() {
 			// TODO Auto-generated constructor stub
 		}
-		public InstructorDetail(int id, String youTube, String hobby) {
+		public InstructorDetail(String youTube, String hobby) {
 			super();
-			this.id = id;
 			this.youTube = youTube;
 			this.hobby = hobby;
 		}
@@ -36,9 +35,6 @@ public class InstructorDetail {
 			return id;
 		}
 
-		public void setId(int id) {
-			this.id = id;
-		}
 
 		public String getYouTube() {
 			return youTube;

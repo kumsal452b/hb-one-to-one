@@ -19,14 +19,21 @@ public class CreateDemo {
 		
 		Session session=sessionFactory.getCurrentSession();
 		
+		session.beginTransaction();
 		try {
 			
+			Instructor tempInstructor=new Instructor("Alatas", "Kumsal", "kumsal@gmail.com");
 			
-			session.beginTransaction();
+			InstructorDetail tempInsDetail=new InstructorDetail("kumsalYoutube", "i like to read books");
 			
+			tempInstructor.setInstructorDetail(tempInsDetail);
+			
+			
+			System.out.println("Saved :" +tempInstructor);
+			session.save(tempInstructor);
 			
 			session.getTransaction().commit();
-			
+			session.close();
 			System.out.println("Saved succesfuly");
 		} finally {
 			// TODO: handle finally clause
