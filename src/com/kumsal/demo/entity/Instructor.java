@@ -42,6 +42,12 @@ public class Instructor {
 		this.firstName = firstName;
 		this.email = email;
 	}
+
+	@Override
+	public String toString() {
+		return "Instructor [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", email=" + email
+				+ ", instructorDetail=" + instructorDetail + "]";
+	}
 	
 	
 }
