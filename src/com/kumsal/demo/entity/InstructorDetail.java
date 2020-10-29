@@ -22,6 +22,9 @@ public class InstructorDetail {
 		@Column(name="hobby")
 		private String hobby;
 
+		public InstructorDetail() {
+			// TODO Auto-generated constructor stub
+		}
 		public InstructorDetail(int id, String youTube, String hobby) {
 			super();
 			this.id = id;
