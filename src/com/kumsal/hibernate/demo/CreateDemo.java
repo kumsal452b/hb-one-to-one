@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.kumsal.demo.entity.Student;
 
-public class CreateStudentDemo {
+public class CreateDemo {
 
 	public static void main(String[] args) {
 		SessionFactory sessionFactory=new Configuration()
@@ -17,11 +17,10 @@ public class CreateStudentDemo {
 		Session session=sessionFactory.getCurrentSession();
 		
 		try {
-			Student theStudent=new Student("Kumsal", "Kumsal", "kumsal@gmail.com");
+			
 			
 			session.beginTransaction();
 			
-			session.save(theStudent);
 			
 			session.getTransaction().commit();
 			
