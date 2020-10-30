@@ -25,7 +25,7 @@ public class CreateDemo {
 			Instructor tempInstructor=new Instructor("Alatas", "Kumsal", "kumsal@gmail.com");
 			
 			InstructorDetail tempInsDetail=new InstructorDetail("kumsalYoutube", "i like to read books");
-			
+			session=sessionFactory.getCurrentSession();
 			tempInstructor.setInstructorDetail(tempInsDetail);
 			
 			
