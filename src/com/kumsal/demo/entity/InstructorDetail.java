@@ -12,11 +12,11 @@ import javax.persistence.Table;
 @Table(name="instructor_detail")
 public class InstructorDetail {
 		@Id
-		@GeneratedValue(strategy=GenerationType.AUTO)
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column(name="id")
 		private int id;
 		
-		@Column(name="youtube_chanel")
+		@Column(name="youtube_channel")
 		private String youTube;
 		
 		@Column(name="hobby")
@@ -26,7 +26,6 @@ public class InstructorDetail {
 			// TODO Auto-generated constructor stub
 		}
 		public InstructorDetail(String youTube, String hobby) {
-			super();
 			this.youTube = youTube;
 			this.hobby = hobby;
 		}
