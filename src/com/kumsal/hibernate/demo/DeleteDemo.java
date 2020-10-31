@@ -21,7 +21,7 @@ public class DeleteDemo {
 		
 		session.beginTransaction();
 		try {
-			int theId=1;
+			int theId=2;
 			Instructor theIns=session.get(Instructor.class, theId);
 			
 			System.out.println("The instructor :"+theIns);
