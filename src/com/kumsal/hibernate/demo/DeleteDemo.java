@@ -21,9 +21,16 @@ public class DeleteDemo {
 		
 		session.beginTransaction();
 		try {
+			int theId=1;
+			Instructor theIns=session.get(Instructor.class, theId);
 			
+			System.out.println("The instructor :"+theIns);
 			
-			
+			if (theIns!=null) {
+				System.out.println("The instructor :"+theIns);
+				
+				session.delete(theIns);
+			}
 			session.getTransaction().commit();
 			session.close();
 			System.out.println("Saved succesfuly");
